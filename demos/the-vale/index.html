@@ -39,7 +39,7 @@
     <h1 class="title">The Vale: a world that fades and repaints</h1>
     <p class="lead">Every colour on the screen goes through one table, which greys out each ink you do not hold yet. Win an ink and the table is rebuilt: the room repaints itself column by column, and every room after it is a little brighter. The inks are keys too: BLUE freezes fords, RED burns thorns, GREEN grows vines.</p>
     <p>The Spectrum has eight inks. The Vale has lost them all but the grey. Every attribute the game draws, text and border included, goes through <code>FADE</code>, a 256-byte table: an ink whose colour you do not hold shows as grey, a paper as black. Monsters never fade. They are made of stolen ink.</p>
-    <div class="actions"><a class="btn" href="../../files/inkwright.tap" download>Download the main .tap <small>59 KB</small></a><a class="btn btn-ghost" href="../../files/inkwright-plain.tap" download>Download the plain .tap <small>57 KB</small></a></div>
+    <div class="actions"><a class="btn" href="../../files/inkwright-special.tap" download>Download the special .tap <small>59 KB</small></a><a class="btn btn-ghost" href="../../files/inkwright-normal.tap" download>Download the normal .tap <small>57 KB</small></a></div>
   </div>
   <figure class="hero-shot">
     <a class="shot" href="../../shots/the-vale/map.png" data-caption="The Vale, every room of it in full colour: the Thornwood in the north-west, the Grey Peaks, Inkwell and the Meadows by the river, the Mere and its shrine, Emberford and the lava fields."><img src="../../shots/the-vale/map.png" width="1032" height="648" alt="A map made of sixteen screens: forests, mountains, a river across the middle, a lake, villages with red roofs, lava in the south-east"></a>
@@ -87,14 +87,15 @@
     <div>
       <p class="eyebrow">Download</p>
       <h2>Load it yourself</h2>
-      <p>For the 128K. Two tapes of the same game. <code>inkwright.tap</code> lets you make your apprentice while it loads, and needs an emulator that plays the tape in real time (ZX Spin, Retro Virtual Machine). <code>inkwright-plain.tap</code> loads through the ROM, for emulators that load tapes in a flash; the game then asks at NEW JOURNEY.</p>
-      <p class="meta"><code>inkwright.tap</code>, 59 KB, built 20 November 2026<br><code>inkwright-plain.tap</code>, 57 KB, built 20 November 2026</p>
-      <div class="actions"><a class="btn" href="../../files/inkwright.tap" download>Download the main .tap <small>59 KB</small></a><a class="btn btn-ghost" href="../../files/inkwright-plain.tap" download>Download the plain .tap <small>57 KB</small></a></div>
+      <p>For the 128K. Two tapes, one game. <code>inkwright-special.tap</code> lets you make your apprentice while it loads, but the tape must play in real time, as a cassette does (a real 128K, or ZX Spin or Retro Virtual Machine with fast loading off). <code>inkwright-normal.tap</code> loads the ordinary way and works in any emulator, even ones that load instantly; the game asks the same questions when you pick NEW JOURNEY. Not sure? Take the normal one.</p>
+      <p class="meta"><code>inkwright-special.tap</code>, 59 KB, built 20 November 2026<br><code>inkwright-normal.tap</code>, 57 KB, built 20 November 2026</p>
+      <div class="actions"><a class="btn" href="../../files/inkwright-special.tap" download>Download the special .tap <small>59 KB</small></a><a class="btn btn-ghost" href="../../files/inkwright-normal.tap" download>Download the normal .tap <small>57 KB</small></a></div>
     </div>
     <ol class="steps">
       <li><b>It needs a 128K</b> (a 128K or a grey +2). Pick <b>Tape Loader</b>. On a 48K the tape says it needs a 128K and stops.</li>
-      <li><b>The main tape,</b> <code>inkwright.tap</code>, lets you make your apprentice while it loads: type a name, then pick with the keys or a joystick. Its own loader reads the tape, so the emulator must play it in real time: ZX Spin and Retro Virtual Machine do. Switch off instant and fast loading. It takes about six minutes.</li>
-      <li><b>The plain tape,</b> <code>inkwright-plain.tap</code>, is the same game loaded by the ROM, for emulators that load tapes in a flash. NEW JOURNEY then asks who you are.</li>
+      <li><b>Two tapes, one game: pick by how your emulator loads.</b> Once you are playing they are exactly the same.</li>
+      <li><b>The special tape,</b> <code>inkwright-special.tap</code>, has the loading page: while it loads you type your name and choose a keepsake and a cloak, with a candle burning down beside you. The Spectrum's own loader can't do that, so the game reads the tape itself, and the tape has to play in real time, the way a cassette does. Use it on a real 128K, or in ZX Spin or Retro Virtual Machine with <b>instant and fast loading switched off</b>. It takes about six minutes.</li>
+      <li><b>The normal tape,</b> <code>inkwright-normal.tap</code>, loads the ordinary way, through the Spectrum's own loader, so it works in every emulator, including the ones that load a tape instantly (Fuse with fast loading, phone and web emulators). There is no loading page: when you pick NEW JOURNEY the game asks the same questions on its own screens. <b>Not sure which? Take this one.</b></li>
       <li><b>Saving:</b> at an inn, start the emulator's tape recording, then say yes. To carry on later, load that tape with <b>Load from tape</b> on the title.</li>
       <li><b>On a real Spectrum:</b> play the tape into the EAR socket from a tape player or a TZX player.</li>
     </ol>
