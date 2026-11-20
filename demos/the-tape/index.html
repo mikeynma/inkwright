@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The tape that sings - INKWRIGHT</title>
+<meta name="description" content="While INKWRIGHT loads, the AY plays its title tune. The tape is an ordinary .tap at ROM speed, but after the first block its own loader reads every edge of the signal, and between edges writes one register of the tune to the sound chip. Melody and bass, the whole five minutes.">
+<meta property="og:title" content="The tape that sings - INKWRIGHT">
+<meta property="og:description" content="While INKWRIGHT loads, the AY plays its title tune. The tape is an ordinary .tap at ROM speed, but after the first block its own loader reads every edge of the signal, and between edges writes one register of the tune to the sound chip. Melody and bass, the whole five minutes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mikeynma.github.io/inkwright/demos/the-tape/">
+<meta property="og:image" content="https://mikeynma.github.io/inkwright/shots/the-tape/loading.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="640">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="The INKWRIGHT loading screen: the logo, a prism splitting a white beam into a rainbow, a cloaked figure with a quill, a magenta tower; blue and yellow stripes in the border">
+<link rel="canonical" href="https://mikeynma.github.io/inkwright/demos/the-tape/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mikeynma.github.io/inkwright/shots/the-tape/loading.png">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="../../favicon-32.png" type="image/png">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="preload" href="../../fonts/geist-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../site.css">
+</head>
+<body>
+<div class="tape" aria-hidden="true"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../../" aria-label="INKWRIGHT, the front page"><img src="../../icon.png" width="32" height="32" alt=""><span>INKWRIGHT</span></a>
+    <nav aria-label="Sections"><a href="#how">How it works</a><a href="#screens">Screens</a><a href="#download">Download</a><a href="../../#demos">The game</a></nav>
+  </div>
+</header>
+
+<main>
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="badges"><span class="badge m128K">128K</span><span class="date">20 November 2026</span></p>
+    <h1 class="title">The tape that sings</h1>
+    <p class="lead">While INKWRIGHT loads, the AY plays its title tune. The tape is an ordinary .tap at ROM speed, but after the first block its own loader reads every edge of the signal, and between edges writes one register of the tune to the sound chip. Melody and bass, the whole five minutes.</p>
+    <p>A game this size takes about five minutes from tape. This one spends them playing its own title tune on the 128K's AY chip, with the blue and yellow stripes going in the border as usual. It is still a plain <code>.tap</code> at the ROM's speed. Nothing about the tape is special: the music is all in the loader.</p>
+    <div class="listen"><p><small>The tape's first minute, as our emulator heard it: the ROM's blocks, then the tune with the tape under it</small><br><audio controls preload="none" style="width:100%;max-width:440px" src="../../audio/tape-first-minute.mp3"></audio></p></div>
+    <div class="actions"><a class="btn" href="../../files/inkwright.tap" download>Download the singing .tap <small>49 KB</small></a><a class="btn btn-ghost" href="../../files/inkwright-plain.tap" download>Download the plain .tap <small>50 KB</small></a></div>
+  </div>
+  <figure class="hero-shot">
+    <a class="shot" href="../../shots/the-tape/loading.png" data-caption="A minute and a half in: the loading screen is in, the game is loading behind it, and the tune is playing."><img src="../../shots/the-tape/loading.png" width="640" height="512" alt="The INKWRIGHT loading screen: the logo, a prism splitting a white beam into a rainbow, a cloaked figure with a quill, a magenta tower; blue and yellow stripes in the border"></a>
+    <figcaption>A minute and a half in: the loading screen is in, the game is loading behind it, and the tune is playing.</figcaption>
+  </figure>
+</section>
+
+<section id="how" class="wrap">
+  <p class="eyebrow">How it works</p>
+  <div class="tech">
+    <div class="tech-text">
+      <h2>One register an edge</h2>
+      <p>The ROM loads a BASIC line and a small loader. From there the loader reads the tape itself: it times each edge of the signal, as the ROM does, and once an edge it writes one register of the tune's current frame to the AY, the next one each time. The tune is stored as frames of 8 bytes, the periods and volumes of channels A and B, the noise and the mixer, so a frame is written over and over between interrupts. The interrupt only moves it on to the next frame, 50 times a second. The extra work is the same length every time, 196 T-states, and the edge timing allows for it.</p>
+      <h2>Loader Lab's loader</h2>
+      <p>The loader is the one from our Loader Lab, where the same trick first played Shardstorm's tune, used as it is. INKWRIGHT adds the blocks it loads: the loading screen, the code, the people and the banks, packed small and unpacked in place at the end.</p>
+      <h2>Which emulator</h2>
+      <p>An emulator that loads a tape by catching the ROM's loader and copying the bytes in can't run this one, because it is not the ROM reading the tape. Play it in real time in ZX Spin or Retro Virtual Machine, or on a real 128K. For the other kind, the plain tape loads the same game through the ROM, without the tune.</p>
+      <h2>How it was checked</h2>
+      <p>The build loads the singing tape through our emulator's tape deck the way a person would, edge by edge, with no shortcut: our loader takes over 26 seconds in, and the title appears 288 seconds in. The minute on this page was recorded from that load. The plain tape is loaded the same way, and a 48K is shown to say it needs a 128K. Not yet heard from a real tape on a real 128K.</p>
+    </div>
+    <aside class="card numbers">
+      <h3>The numbers</h3>
+      <dl><dt>The tape</dt><dd>48,029 bytes; the title after 4.8 minutes</dd><dt>Tune</dt><dd>1,216 frames of 8 bytes, played round and round</dd><dt>Each edge</dt><dd>one AY register, 196 T-states</dd><dt>Plain tape</dt><dd>50,338 bytes, about 6 minutes, silent</dd><dt>Machine</dt><dd>128K, +2</dd></dl>
+    </aside>
+  </div>
+</section>
+
+<section id="screens" class="wrap">
+  <p class="eyebrow">Screens</p>
+  <h2>As our emulator draws it</h2>
+  <p class="sub">Full frames, border and all. Click a picture to see it bigger.</p>
+  <div class="gallery">
+    <a class="shot" href="../../shots/the-tape/loading.png" data-caption="A minute and a half in: the loading screen is in, the game is loading behind it, and the tune is playing."><img src="../../shots/the-tape/loading.png" width="640" height="512" loading="lazy" alt="The INKWRIGHT loading screen: the logo, a prism splitting a white beam into a rainbow, a cloaked figure with a quill, a magenta tower; blue and yellow stripes in the border"></a>
+    <a class="shot" href="../../shots/the-tape/loading-2.png" data-caption="Nearly three minutes in, still loading, still singing."><img src="../../shots/the-tape/loading-2.png" width="640" height="512" loading="lazy" alt="The same loading screen, blue and yellow stripes in the border"></a>
+    <a class="shot" href="../../shots/the-tape/title.png" data-caption="The title, about five minutes later."><img src="../../shots/the-tape/title.png" width="608" height="480" loading="lazy" alt="The INKWRIGHT title screen, rainbow bars in the border"></a>
+    <a class="shot" href="../../shots/the-tape/on-a-48k.png" data-caption="On a 48K the tape says it needs a 128K."><img src="../../shots/the-tape/on-a-48k.png" width="608" height="480" loading="lazy" alt="The top of the loading screen with the line INKWRIGHT NEEDS A 128K SPECTRUM"></a>
+  </div>
+</section>
+
+<section id="download" class="wrap">
+  <div class="card download">
+    <div>
+      <p class="eyebrow">Download</p>
+      <h2>Load it yourself</h2>
+      <p>For the 128K. Two tapes of the same game. <code>inkwright.tap</code> plays the title tune while it loads, and needs an emulator that plays the tape in real time (ZX Spin, Retro Virtual Machine). <code>inkwright-plain.tap</code> loads silently through the ROM, for emulators that load tapes in a flash.</p>
+      <p class="meta"><code>inkwright.tap</code>, 49 KB, built 20 November 2026<br><code>inkwright-plain.tap</code>, 50 KB, built 20 November 2026</p>
+      <div class="actions"><a class="btn" href="../../files/inkwright.tap" download>Download the singing .tap <small>49 KB</small></a><a class="btn btn-ghost" href="../../files/inkwright-plain.tap" download>Download the plain .tap <small>50 KB</small></a></div>
+    </div>
+    <ol class="steps">
+      <li><b>It needs a 128K</b> (a 128K or a grey +2). Pick <b>Tape Loader</b>. On a 48K the tape says it needs a 128K and stops.</li>
+      <li><b>The singing tape,</b> <code>inkwright.tap</code>, plays the title tune while it loads. Its own loader reads the tape, so the emulator must play it in real time: ZX Spin and Retro Virtual Machine do. Switch off instant and fast loading. The title comes up after about five minutes.</li>
+      <li><b>The plain tape,</b> <code>inkwright-plain.tap</code>, is the same game loaded silently by the ROM, for emulators that load tapes in a flash.</li>
+      <li><b>Saving:</b> at an inn, start the emulator's tape recording, then say yes. To carry on later, load that tape with <b>Load from tape</b> on the title.</li>
+      <li><b>On a real Spectrum:</b> play the tape into the EAR socket from a tape player or a TZX player.</li>
+    </ol>
+  </div>
+</section>
+
+<nav class="wrap pager" aria-label="Other demos">
+  <a href="../the-music/">&larr; The music: nine tunes on the AY</a>
+  <a href="../fights/">Fights: the border loads each monster &rarr;</a>
+</nav>
+</main>
+
+<footer class="wrap foot">
+  <img src="../../icon.png" width="24" height="24" alt="">
+  <div>
+    <p>INKWRIGHT is an original RPG for the 128K ZX Spectrum, written in Z80 assembly with our own assembler and emulator. Made in the UK, by the maker of <a href="https://mikeynma.github.io/">games for the ZX Spectrum Next</a>, <a href="https://mikeynma.github.io/borders-and-loaders/">Borders &amp; Loaders</a> and the <a href="https://mikeynma.github.io/spectrum-sound-lab/">Spectrum Sound Lab</a>.</p>
+    <p class="small">The game, its story, pictures and music are all original and our own. Text in Geist, under the SIL Open Font License.</p>
+  </div>
+</footer>
+<dialog class="lightbox" aria-label="Screenshot">
+  <figure><img alt=""><figcaption></figcaption></figure>
+  <button class="lb-btn lb-prev" type="button" aria-label="Previous picture">&lsaquo;</button>
+  <button class="lb-btn lb-next" type="button" aria-label="Next picture">&rsaquo;</button>
+  <button class="lb-btn lb-close" type="button" autofocus aria-label="Close">&times;</button>
+</dialog>
+<script src="../../site.js"></script>
+</body>
+</html>
