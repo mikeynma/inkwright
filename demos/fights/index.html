@@ -39,7 +39,7 @@
     <h1 class="title">Fights: the border loads each monster</h1>
     <p class="lead">A fight does not cut to its screen: it loads it, like a tape. Pilot tone in red and cyan, a header, then the picture byte by byte in the Spectrum's own screen order, blue and yellow stripes in the border and the screech of the data with it. Then the colour wheel decides it: a monster hit with its complement takes three times the damage.</p>
     <p>Fights are turn by turn: <b>FIGHT</b>, <b>INK</b>, <b>ITEM</b>, <b>FLEE</b>. The screen for each is drawn out of sight on the 128K's second screen, then loaded onto the first as a tape would load it. The ending loads one last loading screen the same way.</p>
-    <div class="actions"><a class="btn" href="../../files/inkwright.tap" download>Download the singing .tap <small>52 KB</small></a><a class="btn btn-ghost" href="../../files/inkwright-plain.tap" download>Download the plain .tap <small>53 KB</small></a></div>
+    <div class="actions"><a class="btn" href="../../files/inkwright.tap" download>Download the main .tap <small>59 KB</small></a><a class="btn btn-ghost" href="../../files/inkwright-plain.tap" download>Download the plain .tap <small>57 KB</small></a></div>
   </div>
   <figure class="hero-shot">
     <a class="shot" href="../../shots/fights/pilot.png" data-caption="A monster is coming: the pilot tone in the border."><img src="../../shots/fights/pilot.png" width="608" height="480" alt="The Meadows with red and cyan bands in the border, as a tape's pilot tone"></a>
@@ -78,7 +78,10 @@
     <a class="shot" href="../../shots/fights/loaded.png" data-caption="Two thirds in: the picture first, in grey; its colours come last."><img src="../../shots/fights/loaded.png" width="608" height="480" loading="lazy" alt="A grey Quillrat in a frame, the bottom of the room still showing, stripes in the border"></a>
     <a class="shot" href="../../shots/fights/battle.png" data-caption="A Quillrat. Under the picture, the opposites: the pairs of colours that add up to white."><img src="../../shots/fights/battle.png" width="608" height="480" loading="lazy" alt="A red Quillrat in a frame, FIGHT INK ITEM FLEE, OPPOSITES: B-Y R-C M-G W-K"></a>
     <a class="shot" href="../../shots/fights/ink.png" data-caption="A yellow Sunwisp, and BLUE in hand."><img src="../../shots/fights/ink.png" width="608" height="480" loading="lazy" alt="A yellow sun-shaped Sunwisp, the INK menu open with BLUE and BACK"></a>
-    <a class="shot" href="../../shots/fights/complement.png" data-caption="BLUE on yellow: three times the damage, and the Sunwisp fades away."><img src="../../shots/fights/complement.png" width="608" height="480" loading="lazy" alt="The empty frame where the Sunwisp was, and the message: SUNWISP fades away. +16 XP"></a>
+    <a class="shot" href="../../shots/fights/complement.png" data-caption="BLUE on yellow: three times the damage."><img src="../../shots/fights/complement.png" width="608" height="480" loading="lazy" alt="The Sunwisp's frame and the message: COMPLEMENT! SUNWISP takes 72"></a>
+    <a class="shot" href="../../shots/fights/restored.png" data-caption="Nothing dies: the stolen ink runs home, and the Sunwisp is a sunflower again."><img src="../../shots/fights/restored.png" width="608" height="480" loading="lazy" alt="The empty frame and the message: The SUNWISP's stolen ink runs home. It is a SUNFLOWER again!"></a>
+    <a class="shot" href="../../shots/fights/journal.png" data-caption="The colour journal remembers what each monster really was."><img src="../../shots/fights/journal.png" width="608" height="480" loading="lazy" alt="The colour journal listing monsters in their colours, SUNWISP &gt; SUNFLOWER among them"></a>
+    <a class="shot" href="../../shots/fights/rewind.png" data-caption="Lose, and the tape rewinds: the fight unloads backwards into the room you came in by."><img src="../../shots/fights/rewind.png" width="608" height="480" loading="lazy" alt="A fight screen half unloaded, the room showing through from the bottom, loading stripes in the border"></a>
     <a class="shot" href="../../shots/fights/guardian.png" data-caption="A shrine's guardian beaten, the altar free."><img src="../../shots/fights/guardian.png" width="608" height="480" loading="lazy" alt="The grey Tide Shrine with pillars and water, the hero by the altar"></a>
     <a class="shot" href="../../shots/fights/king.png" data-caption="The Grey King: black, and half damage from anything but WHITE."><img src="../../shots/fights/king.png" width="608" height="480" loading="lazy" alt="A crowned grey king in a white frame, GREY KING appears!, the opposites in colour"></a>
   </div>
@@ -89,14 +92,14 @@
     <div>
       <p class="eyebrow">Download</p>
       <h2>Load it yourself</h2>
-      <p>For the 128K. Two tapes of the same game. <code>inkwright.tap</code> plays the title tune while it loads, and needs an emulator that plays the tape in real time (ZX Spin, Retro Virtual Machine). <code>inkwright-plain.tap</code> loads silently through the ROM, for emulators that load tapes in a flash.</p>
-      <p class="meta"><code>inkwright.tap</code>, 52 KB, built 20 November 2026<br><code>inkwright-plain.tap</code>, 53 KB, built 20 November 2026</p>
-      <div class="actions"><a class="btn" href="../../files/inkwright.tap" download>Download the singing .tap <small>52 KB</small></a><a class="btn btn-ghost" href="../../files/inkwright-plain.tap" download>Download the plain .tap <small>53 KB</small></a></div>
+      <p>For the 128K. Two tapes of the same game. <code>inkwright.tap</code> lets you make your apprentice while it loads, and needs an emulator that plays the tape in real time (ZX Spin, Retro Virtual Machine). <code>inkwright-plain.tap</code> loads through the ROM, for emulators that load tapes in a flash; the game then asks at NEW JOURNEY.</p>
+      <p class="meta"><code>inkwright.tap</code>, 59 KB, built 20 November 2026<br><code>inkwright-plain.tap</code>, 57 KB, built 20 November 2026</p>
+      <div class="actions"><a class="btn" href="../../files/inkwright.tap" download>Download the main .tap <small>59 KB</small></a><a class="btn btn-ghost" href="../../files/inkwright-plain.tap" download>Download the plain .tap <small>57 KB</small></a></div>
     </div>
     <ol class="steps">
       <li><b>It needs a 128K</b> (a 128K or a grey +2). Pick <b>Tape Loader</b>. On a 48K the tape says it needs a 128K and stops.</li>
-      <li><b>The singing tape,</b> <code>inkwright.tap</code>, plays the title tune while it loads. Its own loader reads the tape, so the emulator must play it in real time: ZX Spin and Retro Virtual Machine do. Switch off instant and fast loading. The title comes up after about five minutes.</li>
-      <li><b>The plain tape,</b> <code>inkwright-plain.tap</code>, is the same game loaded silently by the ROM, for emulators that load tapes in a flash.</li>
+      <li><b>The main tape,</b> <code>inkwright.tap</code>, lets you make your apprentice while it loads: type a name, then pick with the keys or a joystick. Its own loader reads the tape, so the emulator must play it in real time: ZX Spin and Retro Virtual Machine do. Switch off instant and fast loading. It takes about six minutes.</li>
+      <li><b>The plain tape,</b> <code>inkwright-plain.tap</code>, is the same game loaded by the ROM, for emulators that load tapes in a flash. NEW JOURNEY then asks who you are.</li>
       <li><b>Saving:</b> at an inn, start the emulator's tape recording, then say yes. To carry on later, load that tape with <b>Load from tape</b> on the title.</li>
       <li><b>On a real Spectrum:</b> play the tape into the EAR socket from a tape player or a TZX player.</li>
     </ol>
@@ -104,7 +107,7 @@
 </section>
 
 <nav class="wrap pager" aria-label="Other demos">
-  <a href="../the-tape/">&larr; The tape that sings</a>
+  <a href="../the-tape/">&larr; The tape that listens: make your apprentice while it loads</a>
   <a href="../the-vale/">The Vale: a world that fades and repaints &rarr;</a>
 </nav>
 </main>

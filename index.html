@@ -60,7 +60,7 @@
         <p class="badges"><span class="badge m128K">128K</span><span class="date">20 November 2026</span></p>
         <h3><a href="demos/the-game/">The game: paint the Vale back</a></h3>
         <p>The Grey King has drunk the colour from the Vale, and only the inkwrights remember how to paint it back. There is one apprentice left: you. Half an hour to an hour of exploring, talking, fighting and painting, from Orla's house in Inkwell to the top of the Grey Tower.</p>
-        <p class="links"><a class="btn btn-small" href="demos/the-game/">How it works</a><a class="btn btn-small btn-ghost" href="files/inkwright.tap" download>singing .tap</a><a class="btn btn-small btn-ghost" href="files/inkwright-plain.tap" download>plain .tap</a></p>
+        <p class="links"><a class="btn btn-small" href="demos/the-game/">How it works</a><a class="btn btn-small btn-ghost" href="files/inkwright.tap" download>main .tap</a><a class="btn btn-small btn-ghost" href="files/inkwright-plain.tap" download>plain .tap</a></p>
       </div>
     </article>
     <article class="demo card">
@@ -69,7 +69,7 @@
         <p class="badges"><span class="badge m128K">128K</span><span class="date">20 November 2026</span></p>
         <h3><a href="demos/the-vale/">The Vale: a world that fades and repaints</a></h3>
         <p>Every colour on the screen goes through one table, which greys out each ink you do not hold yet. Win an ink and the table is rebuilt: the room repaints itself column by column, and every room after it is a little brighter. The inks are keys too: BLUE freezes fords, RED burns thorns, GREEN grows vines.</p>
-        <p class="links"><a class="btn btn-small" href="demos/the-vale/">How it works</a><a class="btn btn-small btn-ghost" href="files/inkwright.tap" download>singing .tap</a><a class="btn btn-small btn-ghost" href="files/inkwright-plain.tap" download>plain .tap</a></p>
+        <p class="links"><a class="btn btn-small" href="demos/the-vale/">How it works</a><a class="btn btn-small btn-ghost" href="files/inkwright.tap" download>main .tap</a><a class="btn btn-small btn-ghost" href="files/inkwright-plain.tap" download>plain .tap</a></p>
       </div>
     </article>
     <article class="demo card">
@@ -78,17 +78,16 @@
         <p class="badges"><span class="badge m128K">128K</span><span class="date">20 November 2026</span></p>
         <h3><a href="demos/fights/">Fights: the border loads each monster</a></h3>
         <p>A fight does not cut to its screen: it loads it, like a tape. Pilot tone in red and cyan, a header, then the picture byte by byte in the Spectrum's own screen order, blue and yellow stripes in the border and the screech of the data with it. Then the colour wheel decides it: a monster hit with its complement takes three times the damage.</p>
-        <p class="links"><a class="btn btn-small" href="demos/fights/">How it works</a><a class="btn btn-small btn-ghost" href="files/inkwright.tap" download>singing .tap</a><a class="btn btn-small btn-ghost" href="files/inkwright-plain.tap" download>plain .tap</a></p>
+        <p class="links"><a class="btn btn-small" href="demos/fights/">How it works</a><a class="btn btn-small btn-ghost" href="files/inkwright.tap" download>main .tap</a><a class="btn btn-small btn-ghost" href="files/inkwright-plain.tap" download>plain .tap</a></p>
       </div>
     </article>
     <article class="demo card">
-      <div class="demo-media"><a class="shot" href="shots/the-tape/loading.png" data-caption="A minute and a half in: the loading screen is in, the game is loading behind it, and the tune is playing."><img src="shots/the-tape/loading.png" width="640" height="512" loading="lazy" alt="The INKWRIGHT loading screen: the logo, a prism splitting a white beam into a rainbow, a cloaked figure with a quill, a magenta tower; blue and yellow stripes in the border"></a></div>
+      <div class="demo-media"><a class="shot" href="shots/the-tape/grey.png" data-caption="The loading screen arrives grey, and a page opens: who are you, apprentice?"><img src="shots/the-tape/grey.png" width="640" height="512" loading="lazy" alt="A grey loading screen: the INKWRIGHT logo, a page asking WHO ARE YOU, APPRENTICE? with a line for a name, a short candle on the right"></a></div>
       <div class="demo-text">
         <p class="badges"><span class="badge m128K">128K</span><span class="date">20 November 2026</span></p>
-        <h3><a href="demos/the-tape/">The tape that sings</a></h3>
-        <p>While INKWRIGHT loads, the AY plays its title tune. The tape is an ordinary .tap at ROM speed, but after the first block its own loader reads every edge of the signal, and between edges writes one register of the tune to the sound chip. Melody and bass, the whole five minutes.</p>
-        <p class="listen"><small>The tape's first minute, as our emulator heard it: the ROM's blocks, then the tune with the tape under it</small><br><audio controls preload="none" style="width:100%;max-width:440px" src="audio/tape-first-minute.mp3"></audio></p>
-        <p class="links"><a class="btn btn-small" href="demos/the-tape/">How it works</a><a class="btn btn-small btn-ghost" href="files/inkwright.tap" download>singing .tap</a><a class="btn btn-small btn-ghost" href="files/inkwright-plain.tap" download>plain .tap</a></p>
+        <h3><a href="demos/the-tape/">The tape that listens: make your apprentice while it loads</a></h3>
+        <p>Six minutes of loading become the start of the game. The loading screen arrives grey and its colours come home ink by ink; then a page opens beneath it and asks who you are. Type a name, take a keepsake from Orla's shelf, choose the colour of your cloak, while a candle burns down beside the page as the tape loads.</p>
+        <p class="links"><a class="btn btn-small" href="demos/the-tape/">How it works</a><a class="btn btn-small btn-ghost" href="files/inkwright.tap" download>main .tap</a><a class="btn btn-small btn-ghost" href="files/inkwright-plain.tap" download>plain .tap</a></p>
       </div>
     </article>
     <article class="demo card">
@@ -98,7 +97,7 @@
         <h3><a href="demos/the-music/">The music: nine tunes on the AY</a></h3>
         <p>Nine original tunes for the 128K's AY chip: the title in D major, whose theme comes back at the end, the Vale, a town waltz, a dungeon with an echo, a fight, a guardian, the Grey Tower and a victory jingle. Here as our emulator plays them, each twice through (the jingle once).</p>
         <p class="listen"><small>The title, 24 s</small><br><audio controls preload="none" style="width:100%;max-width:440px" src="audio/title.mp3"></audio></p>
-        <p class="links"><a class="btn btn-small" href="demos/the-music/">How it works</a><a class="btn btn-small btn-ghost" href="files/inkwright.tap" download>singing .tap</a><a class="btn btn-small btn-ghost" href="files/inkwright-plain.tap" download>plain .tap</a></p>
+        <p class="links"><a class="btn btn-small" href="demos/the-music/">How it works</a><a class="btn btn-small btn-ghost" href="files/inkwright.tap" download>main .tap</a><a class="btn btn-small btn-ghost" href="files/inkwright-plain.tap" download>plain .tap</a></p>
       </div>
     </article>
   </div>
@@ -109,13 +108,13 @@
     <div>
       <p class="eyebrow">Loading it</p>
       <h2>Load the tape</h2>
-      <p>Two tapes of the same game. Pick the singing one if your emulator plays tapes in real time, the plain one if it loads them in a flash.</p>
+      <p>Two tapes of the same game. Pick the main one if your emulator plays tapes in real time, the plain one if it loads them in a flash.</p>
       <p class="meta">Tapes last built: 20 November 2026.</p>
     </div>
     <ol class="steps">
       <li><b>It needs a 128K</b> (a 128K or a grey +2). Pick <b>Tape Loader</b>. On a 48K the tape says it needs a 128K and stops.</li>
-      <li><b>The singing tape,</b> <code>inkwright.tap</code>, plays the title tune while it loads. Its own loader reads the tape, so the emulator must play it in real time: ZX Spin and Retro Virtual Machine do. Switch off instant and fast loading. The title comes up after about five minutes.</li>
-      <li><b>The plain tape,</b> <code>inkwright-plain.tap</code>, is the same game loaded silently by the ROM, for emulators that load tapes in a flash.</li>
+      <li><b>The main tape,</b> <code>inkwright.tap</code>, lets you make your apprentice while it loads: type a name, then pick with the keys or a joystick. Its own loader reads the tape, so the emulator must play it in real time: ZX Spin and Retro Virtual Machine do. Switch off instant and fast loading. It takes about six minutes.</li>
+      <li><b>The plain tape,</b> <code>inkwright-plain.tap</code>, is the same game loaded by the ROM, for emulators that load tapes in a flash. NEW JOURNEY then asks who you are.</li>
       <li><b>Saving:</b> at an inn, start the emulator's tape recording, then say yes. To carry on later, load that tape with <b>Load from tape</b> on the title.</li>
       <li><b>On a real Spectrum:</b> play the tape into the EAR socket from a tape player or a TZX player.</li>
     </ol>
@@ -127,6 +126,7 @@
   <h2>What's new</h2>
   <div class="log card">
     <ul>
+      <li><time datetime="2026-11-21">21 November 2026</time> <b>Version 1.3: nothing dies.</b> Lose a fight and <a href="demos/fights/">the tape rewinds</a>; every monster you beat is restored to the creature it was, and once enough of a kind are home, they stop coming. The Grey King can be saved, if you bring him what he lost. And <a href="demos/the-tape/">you make your apprentice while the tape loads</a>: a name, a keepsake and a cloak, with a candle burning down beside the page. Saves from 1.1 and 1.2 still load.</li>
       <li><time datetime="2026-11-21">21 November 2026</time> <b>Version 1.2:</b> eight lost pigments to find, one of every colour, with rewards from Orla; Wick, the last lamplighter, with a bed and a shop below the Grey King's throne and the best coat in the Vale; the play time at the end now counts the fights properly. Saves from 1.1 still load.</li>
       <li><time datetime="2026-11-20">20 November 2026</time> <b>Version 1.1: please download the tape again.</b> Version 1.0 could not be finished: after BLUE the fords would not let you cross into the next room. Fixed, along with a dead end outside the Tide Shrine and Orla's first words being cut short. New: <a href="demos/the-game/">a face beside everyone who speaks</a>, and fairer fights early on and against the Grey King. The version is on the title screen.</li>
       <li><time datetime="2026-11-20">20 November 2026</time> <b>A map, a tour and a second coat:</b> <a href="demos/the-game/">the field menu has a map of the rooms you have walked</a>; left alone, the title tours the Vale, painting each room; and after the ending, a harder second journey. The hound and the knight are redrawn.</li>
