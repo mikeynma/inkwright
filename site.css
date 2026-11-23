@@ -76,12 +76,13 @@ main > section { padding: 76px 0 0; }
 .hero { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center; padding-top: 52px; }
 .hero h1 { margin: 6px 0 18px; }
 .hero h1.title { font: 900 clamp(1.8rem, 4vw, 2.7rem)/1.15 Geist, system-ui, sans-serif; color: var(--heading); text-shadow: 3px 3px 0 var(--blue); }
-.logo { display: block; width: min(560px, 100%); image-rendering: pixelated; }
+.logo { display: block; width: min(600px, 100%); height: auto; }
 .lead { font: 600 1.25rem/1.4 Geist, system-ui, sans-serif; color: var(--heading); }
 .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
 .hero-shot { margin: 0; }
 .hero-shot img, .hero-shot video, .gallery img, .demo-media img, .demo-media video { display: block; width: 100%; image-rendering: pixelated; background: #000; border: 1px solid var(--border); border-radius: var(--radius); }
 .hero-shot img, .hero-shot video { box-shadow: 8px 8px 0 var(--blue); }
+.hero-shot video, .demo-media video { width: auto; max-width: 100%; height: auto; max-height: 680px; margin: 0 auto; image-rendering: auto; }
 .hero-shot figcaption { margin-top: 14px; font-size: 0.86rem; color: var(--muted); }
 
 /* the demos on the front page */
